@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Accelerating Search-Based Planning for Multi-Robot Manipulation by Leveraging Online-Generated Experiences.">
+  <meta name="keywords" content="MAPF, Manipulation, Robotics">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accelerating Search-Based Planning for Multi-Robot Manipulation by Leveraging Online-Generated Experiences</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3SFQ058VSQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-3SFQ058VSQ');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.gif">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+<!-- 
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav> -->
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Accelerating Search-Based Planning for Multi-Robot Manipulation by Leveraging Online-Generated Experiences</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://yoraish.com">Yorai shaoul</a><sup>★</sup>,</span>
+            <span class="author-block">
+              <a href="https://github.com/imishani">Itamar Mishani</a><sup>★</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.cs.cmu.edu/~maxim/">Maxim Likhachev</a><sup></sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://jiaoyangli.me">Jiaoyang Li</a><sup></sup>.
+            </span>
+          </div>
+            <p class="is-size-5 publication-authors"> Carnegie Mellon University </p>
+            <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>★</sup>Equal contribution.</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/TODO.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/TODO"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/TODO"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span> -->
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser4.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Accelerating multi-agent search-based planning enables multi-arm manipulation with bounded sub-optimality guarantees.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-shelves">
+          <video poster="" id="shelves" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/teaser8.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-binpick">
+          <video poster="" id="binpick" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/binpick2_xecbs.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-ten">
+          <video poster="" id="ten" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/scale_10_xecbs.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-eight">
+          <video poster="" id="eight" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/scale_8_xecbs.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-six">
+          <video poster="" id="six" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/scale_6_xecbs.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-four">
+          <video poster="" id="four" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/scale_4_xecbs.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            An exciting frontier in robotic manipulation is the use of multiple arms at once. However, planning concurrent motions is a challenging task using current methods. The high-dimensional composite state space renders many well-known motion planning algorithms intractable. Recently, multi-agent path finding (MAPF) algorithms have shown promise in discrete 2D domains, providing rigorous guarantees. However, widely used conflict-based methods in MAPF assume an efficient single-agent motion planner. This poses challenges in adapting them to manipulation cases where this assumption does not hold, due to the high dimensionality of configuration spaces and the computational bottlenecks associated with collision checking. To this end, we propose an approach for accelerating conflict-based search algorithms by leveraging their repetitive and incremental nature -- making them tractable for use in complex scenarios involving multi-arm coordination in obstacle-laden environments. We show that our method preserves completeness and bounded sub-optimality guarantees, and demonstrate its practical efficacy through a set of experiments with up to 10 robotic arms.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Experimentation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Experimentation</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            Applying accelerated search-based planning to real world manipulation tasks shows promise. Experience Accelerated ECBS, <em>xECBS</em>, succeeds in 84% of the shelf-rearrangement trials, with the second best method succeeds in 40% of the trials. In bin-picking with 4 arms, sampling-based methods yield suboptimal solutions and xECBS maintains low-costs.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Experimentation. -->
+
+    <div class="columns is-centered">
+      <!-- Manipulation Tasks. -->
+      <div class="column">
+        <div class="content">
+          <h3 class="title is-3">Eight Robots Rearranging Shelves</h3>
+          <img src="./static/images/confusion_matrix_eight_time.png"
+              class="eight-shelves-confusion-image"
+              alt="Eight-robots shelves result."/>
+          <img src="./static/images/panda_eight_shelves.png" 
+              class="eight-shelves-image"
+              alt="Eight-robots shelves result."/>
+        </div>
+      </div>
+
+      <div class="column">
+        <h3 class="title is-3">Four Robots Bin-Picking</h3>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              <br> 
+            </p>
+            <img src="./static/images/confusion_matrix_four_time.png"
+                 class="four-binpick-confusion-image"
+                 alt="Four robots bin-picking results."/>
+            <img src="./static/images/panda_four_binpick_square.png" 
+                 class="four-binpick-image"
+                 alt="Four robots bin-picking results."/>
+                </div>
+        </div>
+      </div>
+    </div>
+    <!--/ Manipulation tasks. -->
+
+
+  </div>
+</section>
+
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{shaoulmishani2023accelerating,
+      author    = {Shaoul, Yorai and Mishani, Itamar and Likhachev, Maxim and Li, Jiaoyang},
+      title     = {Accelerating Search-Based Planning for Multi-Robot Manipulation by Leveraging Online-Generated Experiences},
+      journal   = {},
+      year      = {2023},
+    }</code></pre>
+  </div>
+</section> -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website was adapted from <a href="https://nerfies.github.io">Nerfies</a>, and is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
