@@ -1,6 +1,6 @@
-# Nerfies
+#  Accelerating Search-Based Planning for Multi-Robot Manipulation by Leveraging Online-Generated Experiences.
 
-This is the repository that contains source code for our paper website [_Accelerating Search-Based Planning for Multi-Robot Manipulation by Leveraging Online-Generated Experiences_](https://x-cbs.github.io/).
+This is the repository that contains the source code for our paper website [_Accelerating Search-Based Planning for Multi-Robot Manipulation by Leveraging Online-Generated Experiences_](https://x-cbs.github.io/).
 It has been adapted from the [Nerfies website](https://nerfies.github.io).
 
 If you find our work useful, please cite:
