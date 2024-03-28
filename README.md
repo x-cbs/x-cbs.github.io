@@ -10,7 +10,7 @@ If you find our work useful, please cite:
   author = {Shaoul*, Yorai and Mishani*, Itamar and Likhachev, Maxim and Li, Jiaoyang},
   booktitle = {34th International Conference on Automated Planning and Scheduling},
   year = {2024},
-  page = {github.com/x-cbs},
+  page = {x-cbs.github.io},
 }
 ```
 
