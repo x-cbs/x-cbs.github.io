@@ -5,11 +5,12 @@ It has been adapted from the [Nerfies website](https://nerfies.github.io).
 
 If you find our work useful, please cite:
 ```
-@article{shaoulmishani2023accelerating,
-  author    = {Shaoul, Yorai and Mishani, Itamar and Likhachev, Maxim and Li, Jiaoyang},
-  title     = {Accelerating Search-Based Planning for Multi-Robot Manipulation by Leveraging Online-Generated Experiences},
-  journal   = {},
-  year      = {2023},
+@inproceedings{shaoul2024accelerating,
+  title = {Accelerating Search-Based Planning for Multi-Robot Manipulation by Leveraging Online-Generated Experiences},
+  author = {Shaoul*, Yorai and Mishani*, Itamar and Likhachev, Maxim and Li, Jiaoyang},
+  booktitle = {34th International Conference on Automated Planning and Scheduling},
+  year = {2024},
+  page = {github.com/x-cbs},
 }
 ```
 
